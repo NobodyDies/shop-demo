@@ -32,7 +32,7 @@
 
     <v-col cols="12" sm="4">
       <v-card>
-        <v-card-title>Итого: {{ cartStore.totalPrice }} $</v-card-title>
+        <v-card-title>Итого: {{ cartStore.totalPrice.toFixed(2) }} $</v-card-title>
         <v-card-actions>
           <v-btn color="primary" @click="checkout">Оформить заказ</v-btn>
           <v-dialog v-model="dialog" max-width="400">
