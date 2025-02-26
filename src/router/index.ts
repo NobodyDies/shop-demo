@@ -11,10 +11,18 @@ const routes = [
     component: HomePage,
   },
   {
+    path: '/category',
+    redirect: '/'
+  },
+  {
     path: '/category/:categoryName',
     name: 'Category',
     component: CategoryPage,
     props: true
+  },
+  {
+    path: '/product',
+    redirect: '/'
   },
   {
     path: '/product/:id',
@@ -26,6 +34,10 @@ const routes = [
     path: '/cart',
     name: 'Cart',
     component: CartPage
+  },
+  {
+    path: '/:catchAll(.*)',
+    redirect: '/'
   }
 ];
 
