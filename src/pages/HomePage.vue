@@ -2,7 +2,7 @@
 <v-container>
   <h1>Категории</h1>
   <category-scaffolding v-if="isLoading"/>
-  <v-row>
+  <v-row v-else>
     <v-col
       v-for="(cat, index) in categories"
       :key="index"
@@ -26,7 +26,7 @@
 
   <h1>Все товары</h1>
   <product-scaffolding v-if="isLoading"/>
-  <v-row>
+  <v-row v-else>
     <v-col
       v-for="product in products"
       :key="product.id"
